@@ -8,4 +8,5 @@ npx tsc --init --outDir dist/ --rootDir src
 npm i express
 npm i --save-dev @types/express
 npm i dotenv env-var
-
+npm i mongoose
+npm i bcryptjs
