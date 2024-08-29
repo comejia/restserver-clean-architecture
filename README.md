@@ -10,3 +10,9 @@ npm i --save-dev @types/express
 npm i dotenv env-var
 npm i mongoose
 npm i bcryptjs
+npm i jsonwebtoken
+npm i --save-dev @types/jsonwebtoken
+
+Recursos
+* https://jwt.io/
+* Generar semilla: openssl rand -hex 32
