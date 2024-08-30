@@ -7,7 +7,7 @@ export class AuthMiddleware {
     static validateJwt = async(req: Request, res: Response, next: NextFunction) => {
 
         const authorization = req.header('Authorization')
-        
+
         if (!authorization) return res.status(401).json({error: 'No token provided'});
         if (!authorization.startsWith('Bearer ')) return res.status(401).json({error: 'Invalid Bearer token'});
 
@@ -20,7 +20,7 @@ export class AuthMiddleware {
             const user = await UserModel.findById(payload.id)
             if (!user) return res.status(401).json({error: 'Invalid token - user not found'})
 
-            req.body.user = user
+            //req.body.user = user
 
             next()
         } catch(error) {
